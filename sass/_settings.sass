@@ -13,10 +13,23 @@ img
 h1, h2, h3, h4, h5, h6, p
     margin: 0
     padding: 0
-h1, h2
+h1
     font-family: 'Roboto Condensed', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+h2
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 20px
+    line-height: 24px
+    letter-spacing: 0.2px
 h3
     font-family: 'Roboto', sans-serif
+
 ul, ol
     margin: 0
     padding: 0
@@ -26,7 +39,7 @@ a
     text-decoration: none
     cursor: pointer
     &:hover
-        color: #fff
+        color: $murk
 button
     border: none
     cursor: pointer
@@ -42,9 +55,10 @@ button
     color: $murk
     background-color: $secondary
     border: 2px solid $murk
-    border-radius: 8px
+    border-radius: 10px
     &:hover
-        background-color: #fff
+        background-color: $murk
+        color: $secondary
 ::placeholder
     font-size: 12px
     color: #BDBDBD
