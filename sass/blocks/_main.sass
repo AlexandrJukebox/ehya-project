@@ -1,20 +1,26 @@
 .main
     &-screen
         display: grid
-        grid-template-columns: 585px 485px
+        grid-template-columns: 585px 488px
         grid-column-gap: 67px
     &-description
-        grid-row: span 1
-        display: flex
-        flex-direction: column
-        flex-wrap: wrap
-        padding-top: 46px
+        grid-column: 1
+        padding-top: 47px
+        max-width: 100%
         &__design
-            margin-left: -4px
             color: $special
-        &__weight
-            margin-left: -4px
-            margin-bottom: 27px
+        &__theory
+            margin-left: 12px
+            color: $special
+        &__the
+            margin-left: 1px
+        &__psychology
+            margin-left: 12px
+        &__of
+            margin-left: 2px
+        &__pricing
+            margin-left: 2px
+            letter-spacing: 0.3px
         &__title
             margin-bottom: 37px
         &__text
@@ -23,12 +29,13 @@
             font-size: 18px
             line-height: 32px
             color: $text-color
-            margin-bottom: 57px
+            margin-bottom: 55px
         &__buy
             background-color: $murk
             color: $secondary
-            margin-right: 30px
-            padding: 14px 36px
+            margin-right: 26px
+            padding: 16px 36px
+            border-radius: 8px
             &:hover
                 color: $special
                 background-color: $hvr
@@ -38,7 +45,8 @@
             font-weight: bold
             font-size: 18px
             line-height: 25px
-            padding: 14px 48px
+            padding: 14px 50px
+            border-radius: 8px
             &:hover
                 background-color: $hvr
                 color: $murk
@@ -49,12 +57,10 @@
         justify-content: center
         align-items: center
         background-color: #f7f8f9
-        padding-top: 102px
-        padding-left: 5px
+        padding-top: 101px
         padding-bottom: 59px
-    .image
-        width: 295px
-        z-index: 99
+        &__image
+            width: 298px
     .buttons
         display: flex
         justify-self: start

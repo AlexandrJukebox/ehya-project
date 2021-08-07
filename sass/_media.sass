@@ -5,6 +5,28 @@
         &-screen
             grid-template-columns: 480px 485px
             grid-column-gap: 30px
+    .price
+        &-categories
+            grid-template-columns: repeat(2, 1fr )
+        &-recomendations
+            grid-column: 1
+            grid-column-gap: 20%
+            grid-template-columns: 51% 49%
+            &__more
+                width: 102%
+        &-hot
+            grid-column: 1
+            grid-template-columns: repeat(2, 340px )
+            grid-template-rows: 70px repeat(2, 1fr) 85px
+            &__title
+                grid-column: span 2
+    .best
+        grid-row: 4
+        grid-column: span 2
+        width: 103%
+        &__button
+            width: 96%
+
 @media  (max-width: 992px)
     .container
         max-width: 760px
@@ -13,7 +35,28 @@
             grid-template-columns: 100%
             grid-column-gap: 0
             grid-row-gap: 20px
+    .price
+        &-categories
+            grid-template-columns: 1fr
+        &-recomendations
+            grid-column: 1
+            grid-column-gap: 0
+            grid-template-columns: 49% 49%
+            &__more
+                width: 100%
 
+        &-hot
+            grid-column: 1
+            grid-template-columns: repeat(2, 340px )
+            grid-template-rows: 70px repeat(2, 1fr) 85px
+            &__title
+                grid-column: span 2
+    .best
+        grid-row: 4
+        grid-column: span 2
+        width: 362px
+        &__button
+            width: 96%
 @media ( max-width: 991px)
     .button
         &:hover
@@ -33,6 +76,15 @@
         &__link
             &:hover
                 color: $murk
+    .price
+        &-recomendations
+            &__more
+                &:hover
+                    background-color: #e8f0fb
+    .best
+        &__button
+            &:hover
+                background-color: $hvr
 @media ( max-width: 768px)
     .container,
         max-width: 700px
@@ -45,14 +97,40 @@
             display: flex
     .menu
         padding-top: 20px
+    .price
+        &-categories
+            grid-template-columns: 100%
+        &-recomendations
+            grid-template-columns: unset
+            grid-template-columns: 100%
+            grid-template-rows: 30px repeat(6, 1fr)
+            &__title
+                grid-column: 1
+                text-align: center
+        &-hot
+            grid-template-columns: unset
+            grid-template-rows: unset
+            grid-template-columns: 100%
+            &__title
+                text-align: center
+    .best
+        grid-row: 8
+        margin-left: auto
+        margin-right: auto
+    .card
+        grid-column: 1
+        margin-left: auto
+        margin-right: auto
 @media (max-width:576px)
     .container
         max-width: 700px
         width: 92%
-        height: 62px
     .navbar
         &-top
             padding-top: 18px
+            padding-bottom: 0
+    .logo
+        margin-left: -6px
     .main
         &-screen
             grid-template-columns: 100%
@@ -63,7 +141,7 @@
             padding-top: 73px
         &-description
             display: block
-            padding-top: 39px
+            padding-top: 51px
             &__design
                 font-size: 32px
                 line-height: 40px
@@ -106,7 +184,33 @@
         .buttons
             flex-direction: column
             align-items: center
-
+    .price
+        &-recomendations
+            grid-row-gap: 66px
+            &__title
+                margin-bottom: 40px
+    .card
+        rid-template-columns: unset
+        rid-template-rows: unset
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-display
+            display: none
+        &-book
+            margin-top: -60px
+            padding: 0
+            &__image
+        &-list
+            &__title
+            &__class
+                text-align: center
+            &__value
+                text-align: center
+        &-interactive
+            justify-content: space-evenly
+    .block-hiding
+        display: none
 @media (max-width:320px)
     .container
         max-width: 272px

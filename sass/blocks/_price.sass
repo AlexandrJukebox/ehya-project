@@ -1,0 +1,101 @@
+.price
+    padding-top: 100px
+    &-categories
+        display: grid
+        grid-template-columns: 370px 370px 360px
+        grid-column-gap: 20px
+        grid-template-rows: minmax(40px, auto) repeat(3, minmax(256px, auto)) minmax(72px, auto)
+        grid-row-gap: 27px
+        &__recomendations
+            margin-bottom: 0
+            grid-column: span 2
+            grid-row: 1
+            min-height: 100%
+        &__month
+            grid-column: 3
+            grid-row: 1
+.more
+    &-button
+        grid-column: span 2
+        grid-row: 5
+        text-align: center
+        background-color: #e8f0fb
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 20px
+        min-height: 72px
+        width: 99%
+        margin-left: -3px
+        border-radius: 8px
+        padding-bottom: 5px
+
+.card
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border: 2px solid #eceef2
+    border-radius: 5px
+    max-width: 358px
+    min-height: 256px
+    &:nth-child(2)
+        grid-column: 1
+        grid-row: 2
+    &:nth-child(3)
+        grid-column: 2
+        grid-row: 2
+    &:nth-child(4)
+        grid-column: 1
+        grid-row: 3
+        margin-top: 4px
+    &:nth-child(5)
+        grid-column: 2
+        grid-row: 3
+        margin-top: 4px
+    &:nth-child(6)
+        grid-column: 1
+        grid-row: 4
+        margin-top: 4px
+    &:nth-child(7)
+        grid-column: 2
+        grid-row: 4
+        margin-top: 4px
+    &-book
+        padding: 10px 11px 6px 9px
+        min-width: 182px
+        &__image
+            width: 160px
+            height: 238px
+    &-list
+        padding: 22px 0 11px 7px
+        &__title
+            margin-bottom: 17px
+            letter-spacing: 0.8px
+            font-weight: 700
+            line-height: 1.50
+        &__class
+            margin-bottom: 25px
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 22px
+        &__value
+            margin-bottom: 23px
+            font-family: Roboto Condensed
+            font-style: normal
+            font-weight: 700
+            font-size: 20px
+            line-height: 24px
+            color: $murk
+    &-interactive
+        display: flex
+        justify-content: space-between
+        align-items: end
+        margin-left: -2px
+        margin-bottom: 10px
+        &__like
+            padding-bottom: 4px
+            padding-right: 26px
+.block
+    &-hiding
+        display: none
