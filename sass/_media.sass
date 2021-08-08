@@ -7,26 +7,19 @@
             grid-column-gap: 30px
     .price
         &-categories
-            grid-template-columns: repeat(2, 1fr )
-        &-recomendations
-            grid-column: 1
-            grid-column-gap: 20%
-            grid-template-columns: 51% 49%
-            &__more
-                width: 102%
-        &-hot
-            grid-column: 1
-            grid-template-columns: repeat(2, 340px )
-            grid-template-rows: 70px repeat(2, 1fr) 85px
-            &__title
+            grid-template-columns: 370px 370px
+            grid-template-rows: minmax(40px, auto) repeat(3, minmax(256px, auto)) minmax(72px, auto) minmax(40px, auto) repeat(1, minmax(256px, auto)) minmax(72px, auto)
+            &__recomendations
+                margin-bottom: 0
                 grid-column: span 2
-    .best
-        grid-row: 4
-        grid-column: span 2
-        width: 103%
-        &__button
-            width: 96%
-
+                grid-row: 1
+                min-height: 100%
+            &__month
+                grid-column: span 2
+                grid-row: 6
+        &-top
+            grid-column: span 2
+            grid-row: 7
 @media  (max-width: 992px)
     .container
         max-width: 760px
@@ -37,26 +30,10 @@
             grid-row-gap: 20px
     .price
         &-categories
-            grid-template-columns: 1fr
-        &-recomendations
-            grid-column: 1
-            grid-column-gap: 0
-            grid-template-columns: 49% 49%
-            &__more
-                width: 100%
-
-        &-hot
-            grid-column: 1
-            grid-template-columns: repeat(2, 340px )
-            grid-template-rows: 70px repeat(2, 1fr) 85px
-            &__title
-                grid-column: span 2
-    .best
-        grid-row: 4
-        grid-column: span 2
-        width: 362px
-        &__button
-            width: 96%
+            &__recomendations
+                &__month
+            &-top
+                text-align: center
 @media ( max-width: 991px)
     .button
         &:hover
@@ -85,6 +62,7 @@
         &__button
             &:hover
                 background-color: $hvr
+
 @media ( max-width: 768px)
     .container,
         max-width: 700px
@@ -97,30 +75,36 @@
             display: flex
     .menu
         padding-top: 20px
+    .block-hiding
+        display: none
     .price
         &-categories
-            grid-template-columns: 100%
-        &-recomendations
-            grid-template-columns: unset
-            grid-template-columns: 100%
-            grid-template-rows: 30px repeat(6, 1fr)
-            &__title
+            grid-template-columns: 1fr
+            align-items: center
+            align-content: center
+            grid-template-rows: minmax(40px, auto) repeat(1, minmax(256px, auto)) minmax(72px, auto) minmax(40px, auto) repeat(1, minmax(256px, auto)) minmax(72px, auto)
+            &__recomendations
                 grid-column: 1
+                grid-row: 1
                 text-align: center
-        &-hot
-            grid-template-columns: unset
-            grid-template-rows: unset
-            grid-template-columns: 100%
-            &__title
+            &__month
+                grid-column: 1
+                grid-row: 4
                 text-align: center
-    .best
-        grid-row: 8
-        margin-left: auto
-        margin-right: auto
+        &-top
+            grid-column: 1
+            grid-row: 5
     .card
-        grid-column: 1
         margin-left: auto
         margin-right: auto
+    .hot
+        &-card
+            margin-left: auto
+            margin-right: auto
+    .more
+        &-button
+            grid-column: 1
+            grid-row: 3
 @media (max-width:576px)
     .container
         max-width: 700px
@@ -129,8 +113,11 @@
         &-top
             padding-top: 18px
             padding-bottom: 0
+    .menu
+        &-button
+            margin-right: 8px
     .logo
-        margin-left: -6px
+        margin-left: 2px
     .main
         &-screen
             grid-template-columns: 100%
@@ -138,28 +125,44 @@
             grid-row-gap: 20px
             margin-left: -5px
         &-book
-            padding-top: 73px
+            padding-top: 57px
+            padding-bottom: 34px
+            margin-top: 16px
+            padding-left: 4px
+            &__image
+                width: 171px
         &-description
             display: block
             padding-top: 51px
-            &__design
+            padding-left: 4px
+            &__style
+                font-family: Roboto Condensed
+                font-style: normal
+                font-weight: bold
                 font-size: 32px
                 line-height: 40px
-                text-align: center
                 margin-left: 0
-            &__weight
-                font-size: 32px
-                line-height: 40px
+                margin-bottom: 23px
                 text-align: center
-                margin-bottom: 22px
+            &__theory
+                margin-left: 6px
+            &__the
+                margin-left: 2px
+            &__psychology
+                margin-left: 7px
+            &__of
                 margin-left: 0
+            &__graphic
+                margin-left: 3px
             &__title
                 font-style: normal
                 font-weight: normal
                 font-size: 16px
                 line-height: 24px
                 text-align: center
-                margin-bottom: 32px
+                margin-bottom: 33px
+            &__job
+                margin-left: -6px
             &__text
                 font-style: normal
                 font-weight: normal
@@ -178,42 +181,179 @@
             &__buy
                 margin-right: 0
                 margin-bottom: 14px
-
         .image
             width: 174px
         .buttons
             flex-direction: column
             align-items: center
     .price
-        &-recomendations
-            grid-row-gap: 66px
-            &__title
-                margin-bottom: 40px
+        padding-top: 56px
+        &-categories
+            grid-row-gap: 67px
+            &__recomendations
+                font-style: normal
+                font-weight: bold
+                font-size: 28px
+                line-height: 36px
+            &__month
+                grid-row: 3
+                margin-bottom: -87px
+                font-style: normal
+                font-weight: bold
+                font-size: 28px
+                line-height: 36px
+                letter-spacing: -0.5px
+        &-top
+            grid-row-start: 4
+            grid-row-end: 7
+            flex-direction: column
+
     .card
-        rid-template-columns: unset
-        rid-template-rows: unset
-        display: flex
         flex-direction: column
-        align-items: center
-        &-display
-            display: none
+        position: relative
+        min-width: 280px
+        min-height: 312px
         &-book
-            margin-top: -60px
-            padding: 0
+            position: absolute
+            min-width: 96px
+            top: -35px
+            left: 82px
+            right: 0
+            bottom: 0
             &__image
+                width: 96px
+                height: 137px
         &-list
+            text-align: center
+            padding-top: 131px
             &__title
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                letter-spacing: 0.2px
+                margin-left: -7px
+                margin-bottom: 12px
             &__class
-                text-align: center
+                font-style: normal
+                font-weight: normal
+                font-size: 14px
+                line-height: 20px
+                margin-bottom: 16px
+                margin-left: -7px
             &__value
-                text-align: center
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 20px
+                margin-left: -18px
+                margin-bottom: 20px
         &-interactive
-            justify-content: space-evenly
-    .block-hiding
-        display: none
+            justify-content: center
+            &__like
+                margin-left: 10px
+                padding-bottom: 6px
+                padding-right: 8px
+                padding-left: 8px
+
+    .purchase
+        min-width: 116px
+    .more
+        &-button
+            width: 97%
+            min-height: 50px
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 20px
+            text-transform: none
+            margin-top: -106px
+            margin-left: 6px
+            padding-top: 1px
+            padding-left: 1px
+            letter-spacing: -0.2px
+    .price
+        &-top
+            margin-top: -6px
+    .hot
+        &-card
+            width: 97%
+            min-width: 280px
+            margin: 0
+            padding: 27px 35px 0 15px
+            justify-content: start
+            align-items: start
+            &:nth-child(2)
+                padding: 30px 35px 0 15px
+            &:nth-child(3)
+                padding: 33px 60px 0 15px
+            &:nth-child(4)
+                padding: 33px 45px 14px 15px
+            &__list
+                min-width: 60%
+                padding-top: 0
+                padding-left: 13px
+                margin-top: -5px
+            &__title
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 24px
+                letter-spacing: -0.4px
+                margin-left: 0
+                padding-bottom: 0
+                padding-top: 8px
+            &__pl
+                padding-top: 10px
+            &__growth
+                margin-left: 0
+                letter-spacing: -0.9px
+            &__how
+                margin-left: -2px
+                letter-spacing: -0.9px
+            &__value
+                margin-left: 0
+                font-family: Roboto Condensed
+                font-style: normal
+                font-weight: bold
+                font-size: 20px
+                line-height: 24px
+                margin-bottom: 14px
+                color: #1565D8
+                padding-top: 0
+            &__book
+                padding: 0
+                min-width: 95px
+            &__image
+                width: 97px
+                height: 143px
+            &__purchase
+                min-width: 101px
+    .best
+        height: 83px
+        display: flex
+        align-items: center
+        &__button
+            padding-top: 2px
+            margin-left: 0
+            min-width: 100%
+@media (max-width:360px)
+    .container
+        max-width: 290px
+    .price
+        &-categories
+            grid-template-columns: 290px
+    .card
+        width: 97%
+
 @media (max-width:320px)
     .container
-        max-width: 272px
+        max-width: 290px
     .main
         &-screen
-            grid-template-columns: 280px
+            grid-template-columns: 100%
+    .price
+        &-categories
+            grid-template-columns: 290px
+    .card
+        width: 97%
